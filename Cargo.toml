@@ -1,0 +1,25 @@
+[package]
+name = "wraith-dom"
+version = "0.1.0"
+edition = "2021"
+description = "no_std HTML parser with CSS selectors and Cloudflare challenge solver"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/suhteevah/wraith-dom"
+keywords = ["html", "parser", "css", "no_std", "cloudflare"]
+categories = ["no-std", "parser-implementations", "web-programming"]
+readme = "README.md"
+
+[dependencies]
+log = { version = "0.4", default-features = false }
+
+# Enable the "cloudflare" feature to add Cloudflare IUAM challenge solving.
+# Requires js-lite (https://github.com/suhteevah/js-lite) as a dependency.
+# Uncomment below once js-lite is published to crates.io:
+# js-lite = { version = "0.1", optional = true }
+
+[features]
+default = []
+cloudflare = []
+# When js-lite is published to crates.io, change the above to:
+# cloudflare = ["js-lite"]
+# and uncomment the js-lite dependency above.
